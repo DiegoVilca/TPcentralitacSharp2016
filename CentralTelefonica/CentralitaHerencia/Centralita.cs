@@ -15,17 +15,17 @@ namespace CentralitaHerencia
 
         #region Propiedades
 
-        public float GananciaPorlocal
-        { get { ;} }
+        //public float GananciaPorlocal
+        //{ get { ;} }
 
-        public float GananciaporProvincial
-        { get { ;} }
+        //public float GananciaporProvincial
+        //{ get { ;} }
 
-        public float GananciaTotal
-        { get { ;} }
+        //public float GananciaTotal
+        //{ get { ;} }
 
-        public List<Llamada> Llamadas
-        { get { ;} }
+        //public List<Llamada> Llamadas
+        //{ get { ;} }
 
 
         #endregion Propiedades
@@ -34,12 +34,13 @@ namespace CentralitaHerencia
         #region Constructores
 
         public Centralita()
-        { 
+        {
+            _listaDeLlamadas = new List<Llamada>();
         }
 
-        public Centralita( string nombreEmpresa)
-        { 
-            
+        public Centralita( string nombreEmpresa) :this()
+        {
+            this._razonSocial = nombreEmpresa;
         }
 
         #endregion Constructores
@@ -49,12 +50,16 @@ namespace CentralitaHerencia
 
         private float CalcularGanancia( TipoLlamada tipo)
         {
+            //Retorna el valor de lo recaudado, segun el criterio elegido
             //return provisional
             return 1;
         }
 
         public void Mostrar()
         { 
+            //Mostrara la razon social, la ganancia total
+            //ganancia por llamados locales y provinciales y el
+            //detalle de las llamadas realizadas
         }
 
         public void OrdenarLlamadas()

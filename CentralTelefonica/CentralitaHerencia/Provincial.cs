@@ -15,7 +15,7 @@ namespace CentralitaHerencia
         #region Propiedades
 
         //Retornara el precio que se calculara en el metodo CalcularCosto
-        public float CostoLlamada { get; }
+        public float CostoLlamada { get { return CalcularCosto();  } }
 
 
         #endregion Propiedades
@@ -23,8 +23,7 @@ namespace CentralitaHerencia
 
         #region Constructores
 
-        public Provincial(string origen, Franja miFranja, float duracion, string destino)
-            : base(origen, destino, duracion)
+        public Provincial(string origen, Franja miFranja, float duracion, string destino) :base(origen, destino, duracion)
         {
             base._nroOrigen = origen;
             base._duracion = duracion;
@@ -32,9 +31,8 @@ namespace CentralitaHerencia
             this._franjaHoraria = miFranja;
         }
 
-        public Provincial(Franja miFranja, Llamada unaLlamada) 
-        { 
-            
+        public Provincial(Franja miFranja, Llamada unaLlamada) :this(unaLlamada.NroOrigen, miFranja, unaLlamada.Duracion, unaLlamada.NroDestino)
+        {
         }
 
         #endregion Constructores
@@ -48,15 +46,33 @@ namespace CentralitaHerencia
             //duracion y el costo de la misma.
             //Valores:
             //Franja_1: 0.99, Franja_2: 1.25, Franja_3 : 0.66
-            //return provisional
-            return 1;
+            float costo = 0;
+
+            switch (this._franjaHoraria)
+            {
+                case Franja.Franja_1:   costo = 0.99f * base.Duracion;
+                    break;
+                case Franja.Franja_2:   costo = 1.25f * base.Duracion;
+                    break;
+                case Franja.Franja_3:   costo = 0.66f * base.Duracion;
+                    break;
+                
+            }
+
+            return costo;
+            
         }
 
 
         public void Mostrar()
-        { 
-            //Mostrara ademas de los atributos de la clase base,
-            //_frnajaHoraria y CostoLlamada, utiliza stringbuilder.
+        {
+            StringBuilder sb = new StringBuilder();
+
+            base.Mostrar();
+            sb.AppendLine("Tipo de llamada: Provincial");
+            sb.AppendLine("Franja horaria: "+ this._franjaHoraria);
+            sb.AppendLine("Costo de la llamada: " + this.CostoLlamada);
+            Console.WriteLine(sb.ToString());
         }
 
 

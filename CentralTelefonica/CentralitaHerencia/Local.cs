@@ -21,9 +21,6 @@ namespace CentralitaHerencia
 
         #region Constructores
         
-        public Local(Llamada unaLlamada, float costo) 
-        { 
-        }
 
         public Local(string origen, float duracion, string destino, float costo) :base (origen, destino, duracion)
         {
@@ -31,6 +28,11 @@ namespace CentralitaHerencia
             base._duracion = duracion;
             base._nroDestino = destino;
             this._costo = costo;
+        }
+
+        public Local(Llamada unaLlamada, float costo) :this(unaLlamada.NroOrigen, unaLlamada.Duracion, unaLlamada.NroDestino, costo)
+        {
+
         }
 
         #endregion Constructores

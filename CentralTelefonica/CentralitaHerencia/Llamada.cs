@@ -52,6 +52,13 @@ namespace CentralitaHerencia
         public void Mostrar()
         { 
             //Utiliza stringbuilder
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Numero de origen: "+ this._nroOrigen);
+            sb.AppendLine("Numero de destino: " + this._nroDestino);
+            sb.AppendLine("Duracion: "+ this._duracion);
+
+            Console.WriteLine(sb.ToString());
         }
 
 

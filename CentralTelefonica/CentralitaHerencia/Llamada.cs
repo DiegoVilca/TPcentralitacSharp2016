@@ -56,7 +56,7 @@ namespace CentralitaHerencia
 
             sb.AppendLine("Numero de origen: "+ this._nroOrigen);
             sb.AppendLine("Numero de destino: " + this._nroDestino);
-            sb.AppendLine("Duracion: "+ this._duracion);
+            sb.Append("Duracion: "+ this._duracion);
 
             Console.WriteLine(sb.ToString());
         }
@@ -68,7 +68,7 @@ namespace CentralitaHerencia
             //Sera utilizado en el metodo Sort de la lista
             //generica del mismo tipo (en la clase centralita)
             //return provisional
-            return 1;
+            return uno.Duracion.CompareTo(dos.Duracion);
         }
 
 

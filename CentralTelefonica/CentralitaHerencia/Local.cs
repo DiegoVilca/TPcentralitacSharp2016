@@ -12,7 +12,7 @@ namespace CentralitaHerencia
         protected float _costo;
 
         #region Propiedades
-        //Retornara el precio que se calculara el el metodo CalcularCosto
+        //Retornara el precio que se calculara en el metodo CalcularCosto
         public float CostoLlamada { get { return this.CalcularCosto();  } }
 
 

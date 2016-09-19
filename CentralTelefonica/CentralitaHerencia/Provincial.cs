@@ -15,7 +15,7 @@ namespace CentralitaHerencia
         #region Propiedades
 
         //Retornara el precio que se calculara en el metodo CalcularCosto
-        public float CostoLlamada { get { return CalcularCosto();  } }
+        public float CostoLlamada { get { return this.CalcularCosto();  } }
 
 
         #endregion Propiedades
@@ -69,7 +69,6 @@ namespace CentralitaHerencia
             StringBuilder sb = new StringBuilder();
 
             base.Mostrar();
-            sb.AppendLine("Tipo de llamada: Provincial");
             sb.AppendLine("Franja horaria: "+ this._franjaHoraria);
             sb.AppendLine("Costo de la llamada: " + this.CostoLlamada);
             Console.WriteLine(sb.ToString());

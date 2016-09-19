@@ -13,7 +13,7 @@ namespace CentralitaHerencia
 
         #region Propiedades
         //Retornara el precio que se calculara el el metodo CalcularCosto
-        public float CostoLlamada { get; }
+        public float CostoLlamada { get { return this.CalcularCosto();  } }
 
 
         #endregion
@@ -32,7 +32,6 @@ namespace CentralitaHerencia
 
         public Local(Llamada unaLlamada, float costo) :this(unaLlamada.NroOrigen, unaLlamada.Duracion, unaLlamada.NroDestino, costo)
         {
-
         }
 
         #endregion Constructores
@@ -44,15 +43,21 @@ namespace CentralitaHerencia
         {
             //Retornara el valor de la llamada a partir de la
             //duracion y el costo de la misma.
-            //Return provisional
-            return 1;
+
+            return base.Duracion * this._costo;
         }
 
 
         public void Mostrar()
         {
             //Mostrara ademas de los atributos de la clase base, 
-            //solo la propiedad, CostoLlamada, utiliza stringbuilder
+            //solo la propiedad CostoLlamada, utiliza stringbuilder
+
+            StringBuilder sb = new StringBuilder();
+
+            base.Mostrar();
+            sb.AppendLine("Costo de la llamada: "+ this.CostoLlamada);
+            Console.WriteLine(sb.ToString());
         }
 
 

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CentralitaSerializacion.Program" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CentralitaSerializacion.Centralita">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAEAAAAAAAAAAUQAAQAAAQJAAgAEARAIAAAQAQAyA=</HashCode>
+      <FileName>Centralita.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CentralitaSerializacion.Local">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACQAAAAEgAAAAAAAAAAAAAAAAAAQgAAAAAA=</HashCode>
+      <FileName>local.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CentralitaSerializacion.Provincial">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEgAAAAAAAAAAAAAAEAAAQgAAAAAA=</HashCode>
+      <FileName>Provincial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CentralitaSerializacion.Llamada">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAQAAAAAABAAAAAAAAABAAAAAAAAgAgAAiA=</HashCode>
+      <FileName>Llamada.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CentralitaSerializacion.CentralitaException">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAQAAAAAAAAAAAQACCAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>CentralitaException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CentralitaSerializacion.ISerializable">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>ISerializable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CentralitaSerializacion.TipoLlamada">
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAABAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>TipoLlamada.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CentralitaSerializacion.Franja">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAQAgAAAAAAAAAAA=</HashCode>
+      <FileName>Franja.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace CentralitaHerencia
+namespace CentralitaPolimorfismo
 {
-    public class Llamada
+    public abstract class Llamada
     {
         protected float _duracion;
         protected string _nroDestino;
@@ -32,11 +31,17 @@ namespace CentralitaHerencia
 
         #endregion Propiedades
 
+        public abstract float CostoLlamada
+        {
+            get;
+
+        }
+
 
 
         #region Constructor
 
-        public Llamada(string origen, string destino, float duracion) 
+        public Llamada(string origen, string destino, float duracion)
         {
             this._nroOrigen = origen;
             this._nroDestino = destino;
@@ -49,31 +54,52 @@ namespace CentralitaHerencia
 
         #region Metodos
 
-        public void Mostrar()
-        { 
+        protected virtual string Mostrar()
+        {
             //Utiliza stringbuilder
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("Numero de origen: "+ this._nroOrigen);
+            sb.AppendLine("Numero de origen: " + this._nroOrigen);
             sb.AppendLine("Numero de destino: " + this._nroDestino);
-            sb.Append("Duracion: "+ this._duracion);
+            sb.Append("Duracion: " + this._duracion);
 
-            Console.WriteLine(sb.ToString());
+            return sb.ToString();
         }
 
 
-
+        //ORDENA POR DURACION ASC
         public static int OrdenarPorDuracion(Llamada uno, Llamada dos)
         {
             //Sera utilizado en el metodo Sort de la lista
             //generica del mismo tipo (en la clase centralita)
-            
+
             return uno.Duracion.CompareTo(dos.Duracion);
         }
 
 
         #endregion Metodos
 
+        #region sobrecarga operadores
+        
+        public static bool operator ==(Llamada uno, Llamada dos)
+        {
+            if (uno.Equals(dos))
+            {
+                if (uno.NroOrigen == dos.NroOrigen && uno.NroDestino == dos.NroDestino)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool operator !=(Llamada uno, Llamada dos)
+        {
+            return !(uno == dos);
+        }
+    
+        #endregion
 
     }
 }
